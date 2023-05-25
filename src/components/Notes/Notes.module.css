@@ -1,0 +1,51 @@
+.notesContainer {
+  max-height: 100%;
+  overflow: scroll;
+}
+.selectedNote {
+  background-color: var(--lightGreyColor);
+}
+.notesContainer::-webkit-scrollbar {
+  width: 10px;
+  padding-top: 5px;
+}
+.notesContainer::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 5px;
+  background-color: var(--primaryGreyColor);
+}
+.noteItem:hover,
+.noteItem:focus {
+  background-color: var(--lightGreyColor);
+  cursor: pointer;
+}
+.noteItem {
+  padding: 15px 10px 10px;
+  padding-top: 15px;
+  width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-top: 1px solid var(--lightGreyColor);
+  border-bottom: 1px solid var(--lightGreyColor);
+}
+
+.notePreview {
+  width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--titleColor);
+  font-weight: 600;
+}
+.notePreview::first-letter {
+  text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  .noteItem {
+    width: 160px;
+  }
+  .notePreview {
+    width: 140px;
+  }
+}

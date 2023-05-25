@@ -1,0 +1,26 @@
+.btnImageFormat {
+  height: 20px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.actionBtn {
+  background-color: var(--primaryWhiteColor);
+  border-radius: 5px;
+  box-shadow: 6px 5px 4px -1px rgba(132, 132, 130, 0.4);
+  border: 3px solid transparent;
+  transition: all 500ms;
+}
+.actionBtn:hover,
+.actionBtn:focus {
+  border: 3px solid var(--titleColor);
+  scale: 1.2;
+}
+
+@media screen and (min-width: 768px) {
+  .btnImageFormat {
+    height: 30px;
+    width: 60px;
+  }
+}

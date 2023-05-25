@@ -1,13 +1,225 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--textColor);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bgColor);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* Reset list styles */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Reset anchor styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+/* Make images and embedded objects responsive */
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --bgColor: #fafaf8;
+  --primaryGreyColor: #d5d5d5;
+  --secondaryGreyColor: #e4e4e4;
+  --lightGreyColor: #cfcfcf;
+  --primaryWhiteColor: #f8f8f8;
+  --textColor: #9a9a98;
+  --titleColor: #595959;
+}
+.app__wrapper {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main__wrapper {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.modal {
+  position: absolute;
+  background-color: var(--primaryWhiteColor);
+  padding-top: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 350px;
+  height: 150px;
+  box-shadow: 6px 5px 4px -1px rgba(132, 132, 130, 0.4);
+  border-radius: 5px;
+  border: 1px solid var(--titleColor);
+  text-align: center;
+  z-index: 2;
+}
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+.message {
+  margin-bottom: 15px;
+}
+.btn {
+  padding: 5px;
+  transition: all 500ms;
+}
+.btn:not(:last-of-type) {
+  margin-right: 15px;
+}
+.btn:hover,
+.btn:focus {
+  scale: 1.2;
+}
+.container {
+  max-width: 375px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
